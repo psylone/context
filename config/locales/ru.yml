@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 'Заполните поле с электронной почтой'
+              taken: 'Такая электронная почта уже существует, выберете другую!'
+            password:
+              blank: 'Придумайте пароль'
