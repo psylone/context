@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
-
+  # skip_before_action :login_required, only: [ :new, :create ]
+  # before_action :show_tasks_for_user, only: :new
 
   def new
   end
