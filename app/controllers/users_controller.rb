@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new permitted
 
     if @user.save
-      redirect_to tasks_path, notice: 'Добро пожаловать в Контекст!'
+      redirect_to tasks_path , notice: 'Добро пожаловать в Контекст!'
     else
       render :new
     end

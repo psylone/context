@@ -14,5 +14,6 @@
  *= require layout
  *= require ./shared/flash
  *= require ./shared/form
+ *= require ./tasks/index
  *= require_self
  */

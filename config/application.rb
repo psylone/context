@@ -21,6 +21,6 @@ module Context
     config.i18n.default_locale = :ru
 
     # Disable field_with_errors <div>
-    # config.action_view.field_error_proc = Proc.new{ |html_tag, instance| "#{html_tag}".html_safe }
+    config.action_view.field_error_proc = Proc.new{ |html_tag, instance| "#{html_tag}".html_safe }
   end
 end

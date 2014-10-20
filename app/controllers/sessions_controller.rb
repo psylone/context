@@ -4,13 +4,14 @@ class SessionsController < ApplicationController
   # before_action :show_tasks_for_user, only: :new
 
   def new
+    @time = Time.now
   end
 
   def create
     user = User.authenticate params[:email], params[:password]
     if user
-      session[:user_id] = user.id
-      redirect_to tasks_path, notice: 'Добро пожаловать в Контекст!'
+  #     session[:user_id] = user.id
+      redirect_to tasks_path #, notice: 'Добро пожаловать в Контекст!'
     else
       flash.now.alert = 'Неверный email или пароль'
       render :new
@@ -18,8 +19,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to root_path, notice: 'Выход из Контекста успешно выполнен!'
+  #   session[:user_id] = nil
+  #   redirect_to root_path, notice: 'Выход из Контекста успешно выполнен!'
   end
 
 
